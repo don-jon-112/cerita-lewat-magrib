@@ -11,7 +11,7 @@ export const metadata = {
   description: 'Kirim ide atau cerita horormu. Yang terpilih dijadikan video animasi.',
 };
 
-export const viewport = {themeColor: '#10201c'};
+export const viewport = {themeColor: '#141735'};
 
 export default function RootLayout({children}) {
   return (

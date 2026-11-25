@@ -2,6 +2,7 @@ import Image from 'next/image';
 import FormCerita from './FormCerita';
 import Pintu from './Pintu';
 import {CHANNEL} from '../lib/konfigurasi';
+import logo from '../public/logo.png';
 import adegan1 from '../public/adegan-1.jpg';
 import adegan2 from '../public/adegan-2.jpg';
 import adegan3 from '../public/adegan-3.jpg';
@@ -22,7 +23,10 @@ export default function Halaman() {
       <header className="atas">
         <div className="wadah hero">
           <div className="ajakan">
-            <p className="merek">{CHANNEL.nama}</p>
+            <p className="merek">
+              <Image src={logo} alt="" width={52} height={52} priority />
+              {CHANNEL.nama}
+            </p>
             <h1>Cerita seram kamu, kami hidupkan.</h1>
             <p className="pengantar">Pernah dengar suara dari kamar kosong? Kirim ceritanya. Yang terpilih kami jadikan video animasi horor.</p>
             <div className="aksi">

@@ -1,8 +1,10 @@
-/* Dunia visual: lorong kos tua (tembok hijau pudar, pintu kayu, lampu kuning), formulir = secarik kertas. */
+/* Dunia visual: langit selepas magrib (malam, senja, bara), pintu kayu, lampu kuning, formulir = secarik kertas. */
 :root {
   color-scheme: dark;
-  --tembok: #10201c;
-  --tembok-terang: #2c4a40;
+  --malam: #141735;
+  --senja: #5b2450;
+  --bara: #d9542b;
+  --dasar: #110f1f;
   --kayu: #6e4528;
   --kayu-gelap: #2a190e;
   --lampu: #f4b740;
@@ -11,13 +13,13 @@
   --tinta: #221c14;
   --tinta-redup: #6b5f48;
   --darah: #b3261e;
-  --teks: #edf1e6;
-  --redup: #a9bdb0;
+  --teks: #f3ede2;
+  --redup: #bcb2cc;
 }
 * { box-sizing: border-box; margin: 0; }
 html { scroll-behavior: smooth; }
 body {
-  background: var(--tembok);
+  background: var(--dasar);
   color: var(--teks);
   font-family: var(--f-isi), system-ui, sans-serif;
   line-height: 1.6;
@@ -33,13 +35,13 @@ section { padding-block: 56px 0; }
 
 /* ---------- hero ---------- */
 .atas {
-  background:
-    radial-gradient(60% 55% at 72% 18%, rgba(244, 183, 64, 0.22), transparent 70%),
-    linear-gradient(var(--tembok-terang), var(--tembok) 78%);
+  /* langit magrib: malam di atas, bara di cakrawala */
+  background: linear-gradient(var(--malam) 0%, #2b1b45 45%, var(--senja) 80%, #9c3a3c 94%, var(--bara) 100%);
   border-bottom: 14px solid var(--kayu-gelap);
 }
 .hero { display: grid; gap: 28px; padding-block: 40px 36px; }
-.merek { display: inline-block; font-weight: 800; font-size: 1.05rem; color: var(--kayu-gelap); background: var(--lampu); padding: 4px 14px; border-radius: 4px; rotate: -2deg; }
+.merek { display: flex; align-items: center; gap: 12px; font-weight: 800; font-size: 1.15rem; color: var(--kertas); }
+.merek img { width: 52px; height: 52px; }
 h1 { font-size: clamp(2.5rem, 11vw, 4.6rem); line-height: 0.98; letter-spacing: -0.02em; font-weight: 800; margin-top: 18px; }
 .pengantar { color: var(--redup); margin-top: 16px; max-width: 44ch; font-size: 1.05rem; }
 .aksi { display: flex; flex-wrap: wrap; align-items: center; gap: 18px; margin-top: 24px; }
