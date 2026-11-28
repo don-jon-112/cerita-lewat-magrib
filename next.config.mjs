@@ -2,6 +2,14 @@
 const nextConfig = {
   poweredByHeader: false,
   turbopack: {root: import.meta.dirname},
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**.supabase.co',
+      },
+    ],
+  },
   async headers() {
     return [
       {

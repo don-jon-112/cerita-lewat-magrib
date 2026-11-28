@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "admin:password": "node scripts/password-admin.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.119.2",
